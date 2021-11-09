@@ -10,20 +10,25 @@ import javax.validation.constraints.NotEmpty;
 
 import static javax.persistence.GenerationType.*;
 
-@Entity
+@Entity//Entidade no banco de dados
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Server {
 
-    @Id
+    @Id//Chave primaria da tabela no banco
     @GeneratedValue(strategy = AUTO)
     private Long id;
-    @Column(unique = true)
+
+    @Column(unique = true)//Atributo que deve ser unico e não vai se repetir no banco
     @NotEmpty(message = "IP ADDRESS CANNOT BE EMPTY OR NULL")
     private String ipAddress;
+
     private String name;
+
     private String memory;
+
     private String imageUrl;
+
     private Status status;
 }
