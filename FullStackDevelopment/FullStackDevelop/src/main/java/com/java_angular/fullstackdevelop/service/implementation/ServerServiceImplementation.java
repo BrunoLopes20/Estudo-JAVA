@@ -81,7 +81,7 @@ public class ServerServiceImplementation implements ServerService {
     //Pega umas das imagens de Server de forma Randomica e atribui a um Server novo criado
     private String setServerImageUrl() {
         String[] imageNames = {"server1.png, server2.png, server3.png"};
-        return ServletUriComponentsBuilder.fromCurrentContextPath().path("/FullStackDevelopment/imgServers" +
+        return ServletUriComponentsBuilder.fromCurrentContextPath().path("/server/imgServers" +
                 imageNames[new Random().nextInt(3)]).toUriString();
     }
 }
